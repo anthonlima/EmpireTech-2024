@@ -1,0 +1,71 @@
+.card{
+    box-shadow: 3px 3px 1px #25B45F;
+    background-color: #f1f1f1;
+    padding: 30px
+    border-radius;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.form1{
+    width: 400px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+body{
+    background-color: white;
+    font-family: sans-serif;
+
+}
+
+.card-up{
+    text-align: center;
+}
+
+.card-login{
+    margin-bottom: 20px;
+}
+
+.card-login > label{
+    width: 50%;
+    color: #434343;
+    display: block;
+    margin-left: 170px;
+}
+
+.card-login > input{
+    border-radius: 5px;
+    outline: 0;
+    width: 50%;
+    height: 25px;
+    padding: 5px;
+    align-items: center;
+    margin-left: 95px;
+}
+
+.card-login > button{
+    background-color: #25B45F;
+    width: 75%;
+    height: 35px;
+    border-radius: 6px;
+    border: 0px;
+    color: white;
+    outline: none;
+    margin-left: 48px;
+}
+
+.nomelogin{
+    margin-left: -15px;
+}
+
+.botao1{
+    background-color: #25B45F;
+    width: 75%;
+    height: 35px;
+    border-radius: 6px;
+    border: 0px;
+    color: white;
+    outline: none;
+    margin-left: 48px;
+}

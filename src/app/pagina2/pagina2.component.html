@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela do Banco</title>
+</head>
+
+<body>
+    <img src="assets/logo.png" alt="teste" class="img">
+    <div class="pago">    
+        <p id="numero">2350</p>
+        <input type="number" id="valorSubtrair" placeholder="Valor a ser Pago" class="valor">
+        <button type="button" id="botaoPagar">Pagar</button>
+    </div>
+    <div class="historico">   
+        <h3>Extrato</h3>
+        <ul id="historico"></ul>
+    </div>
+
+    <script>
+        function subtrairNumero() {
+            const elemento = document.getElementById("numero");
+            let valorAtual = parseInt(elemento.textContent.trim());
+
+            if (isNaN(valorAtual)) {
+                alert("Valor atual não é um número válido!");
+                return;
+            }
+
+            let valorSubtrair = parseInt(document.getElementById("valorSubtrair").value);
+
+            if (isNaN(valorSubtrair)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            let novoValor = valorAtual - valorSubtrair;
+
+            if (novoValor < 0) {
+                alert("O valor não pode ser negativo. Tente um valor menor.");
+                return;
+            }
+
+            elemento.textContent = novoValor;
+
+            const historico = document.getElementById("historico");
+            const itemHistorico = document.createElement("li");
+            itemHistorico.textContent = `Pago: R$ ${valorSubtrair}`;
+            historico.appendChild(itemHistorico);
+        }
+
+        document.getElementById("botaoPagar").addEventListener("click", subtrairNumero);
+    </script>
+</body>
+</html>
